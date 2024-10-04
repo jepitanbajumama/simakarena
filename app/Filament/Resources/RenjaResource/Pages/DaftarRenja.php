@@ -84,7 +84,6 @@ class DaftarRenja extends Page
                                 TextInput::make('kinerja')
                                     ->label('Target Kinerja')
                                     ->required()
-                                    // ->maxLength(255)
                                     ->numeric()
                                     ->inputMode('decimal')
                                     ->prefixIcon('heroicon-o-key')
@@ -93,25 +92,21 @@ class DaftarRenja extends Page
                                     ->schema([
                                         TextInput::make('k_tw1')
                                             ->label('TW 1')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('k_tw2')
                                             ->label('TW 2')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('k_tw3')
                                             ->label('TW 3')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('k_tw4')
                                             ->label('TW 4')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key'),
@@ -135,22 +130,18 @@ class DaftarRenja extends Page
                                     ->schema([
                                         TextInput::make('a_tw1')
                                             ->label('TW 1')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('a_tw2')
                                             ->label('TW 2')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('a_tw3')
                                             ->label('TW 3')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('a_tw4')
                                             ->label('TW 4')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key'),
                                     ])

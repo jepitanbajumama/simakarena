@@ -80,7 +80,6 @@ class DaftarKinerja extends Page
                                 TextInput::make('kinerja')
                                     ->label('Target Kinerja')
                                     ->required()
-                                    // ->maxLength(255)
                                     ->numeric()
                                     ->inputMode('decimal')
                                     ->prefixIcon('heroicon-o-key')
@@ -89,28 +88,24 @@ class DaftarKinerja extends Page
                                     ->schema([
                                         TextInput::make('k_tw1')
                                             ->label('TW 1')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key')
                                             ->disabled(),
                                         TextInput::make('k_tw2')
                                             ->label('TW 2')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key')
                                             ->disabled(),
                                         TextInput::make('k_tw3')
                                             ->label('TW 3')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key')
                                             ->disabled(),
                                         TextInput::make('k_tw4')
                                             ->label('TW 4')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key')
@@ -121,25 +116,21 @@ class DaftarKinerja extends Page
                                     ->schema([
                                         TextInput::make('r_k_tw1')
                                             ->label('TW 1')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('r_k_tw2')
                                             ->label('TW 2')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('r_k_tw3')
                                             ->label('TW 3')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('r_k_tw4')
                                             ->label('TW 4')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->inputMode('decimal')
                                             ->prefixIcon('heroicon-o-key'),

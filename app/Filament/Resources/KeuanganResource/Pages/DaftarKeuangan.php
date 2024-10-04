@@ -82,25 +82,21 @@ class DaftarKeuangan extends Page
                                     ->schema([
                                         TextInput::make('a_tw1')
                                             ->label('TW 1')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key')
                                             ->disabled(),
                                         TextInput::make('a_tw2')
                                             ->label('TW 2')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key')
                                             ->disabled(),
                                         TextInput::make('a_tw3')
                                             ->label('TW 3')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key')
                                             ->disabled(),
                                         TextInput::make('a_tw4')
                                             ->label('TW 4')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key')
                                             ->disabled(),
@@ -110,22 +106,18 @@ class DaftarKeuangan extends Page
                                     ->schema([
                                         TextInput::make('r_a_tw1')
                                             ->label('TW 1')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('r_a_tw2')
                                             ->label('TW 2')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('r_a_tw3')
                                             ->label('TW 3')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key'),
                                         TextInput::make('r_a_tw4')
                                             ->label('TW 4')
-                                            // ->maxLength(255)
                                             ->numeric()
                                             ->prefixIcon('heroicon-o-key'),
                                     ])
