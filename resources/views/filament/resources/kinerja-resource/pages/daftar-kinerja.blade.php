@@ -104,7 +104,7 @@
                                         <div class="mt-1 border-t border-gray-100">
                                             <div class="divide-y divide-gray-100">
                                             @foreach($subkegiatan->aktivitas as $aktivitas)
-                                                <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                                <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0" wire:key="aktivitas-{{ $aktivitas->id }}">
                                                     <div class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $loop->iteration }}. {{ $aktivitas->uraian }}</div>
                                                     @if(auth()->id() == $subkegiatan->user_id || auth()->id() == 1 || auth()->id() == 2)
                                                     <div class="mx-auto my-auto sm:col-span-1 sm:mt-0">{{ ($this->editAktivitasAction)(['aktivitas' => $aktivitas->id]) }} {{ ($this->deleteAktivitasAction)(['aktivitas' => $aktivitas->id]) }}</div>
