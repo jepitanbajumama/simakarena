@@ -84,7 +84,7 @@
                                         </x-filament::badge>
                                         {{ $subkegiatan->target_subkegiatan->kinerja }} {{ $subkegiatan->target_subkegiatan->satuan }}
                                         @if(auth()->id() == $subkegiatan->user_id || auth()->id() == 1 || auth()->id() == 2)
-                                            {{ ($this->editAction)(['target_subkegiatan' => $subkegiatan->target_subkegiatan->id]) }}
+                                            {{ ($this->editTargetsubkegiatanAction)(['target_subkegiatan' => $subkegiatan->target_subkegiatan->id]) }}
                                         @endif
                                     </x-slot>
                                     <x-slot name="description">
@@ -101,15 +101,16 @@
                                         </x-slot>
                                         @endif
                                     @if($subkegiatan->aktivitas->isNotEmpty())
-                                        <div>
-                                            <div class="mt-6 border-t border-gray-100">
-                                                <dl class="divide-y divide-gray-100">
-                                                @foreach($subkegiatan->aktivitas as $aktivitas)
-                                                    <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                                                        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $loop->iteration }}. {{ $aktivitas->uraian }}</dd>
-                                                    </div>
-                                                @endforeach
-                                                </dl>
+                                        <div class="mt-1 border-t border-gray-100">
+                                            <div class="divide-y divide-gray-100">
+                                            @foreach($subkegiatan->aktivitas as $aktivitas)
+                                                <div class="px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                                                    <div class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $loop->iteration }}. {{ $aktivitas->uraian }}</div>
+                                                    @if(auth()->id() == $subkegiatan->user_id || auth()->id() == 1 || auth()->id() == 2)
+                                                    <div class="mx-auto my-auto sm:col-span-1 sm:mt-0">{{ ($this->editAktivitasAction)(['aktivitas' => $aktivitas->id]) }} {{ ($this->deleteAktivitasAction)(['aktivitas' => $aktivitas->id]) }}</div>
+                                                    @endif
+                                                </div>
+                                            @endforeach
                                             </div>
                                         </div>
                                     @else
